@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+    - name: install various easy packages
+      pacman:
+         name:
+           - tmux
+           - tree
+           - ncdu
+           - git
+           - emacs
+           - libreoffice-still
+           - stow
+         state: latest
+
+    - name: install xorg group
+      pacman:
+         name: xorg
